@@ -1,0 +1,6 @@
+something
+{{$data := json (getv "/nginx/conf")}}
+{{range $data.blackList}}
+deny {{.}};
+{{end}}
+something
